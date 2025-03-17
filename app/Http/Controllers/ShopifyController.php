@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
 class ShopifyController extends Controller
-{  
+{
     protected $shopifyService;
 
     public function __construct(ShopifyService $shopifyService)

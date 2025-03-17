@@ -25,5 +25,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('/shopify/webhook', function (Request $request) {
+    Log::info('🚀 Shopify Webhook Received!', $request->all());
+    return response()->json(['status' => 'success'], 200);
+});
 
 
